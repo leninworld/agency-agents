@@ -1,0 +1,26 @@
+{
+  "studio-v2.50.0": {
+    "tag": "studio-v2.50.0",
+    "source_commit": "official tag studio-v2.50.0",
+    "assets": [
+      {
+        "browser_download_url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/studio-v2.50.0/reasonix-linux-amd64.tar.gz",
+        "digest": "sha256:385083e2f78a7f26ff5e7bbe24cb4671bea07fb8c09734a78b44c4da5d7e7220",
+        "name": "reasonix-linux-amd64.tar.gz",
+        "size": 39532068
+      }
+    ]
+  },
+  "studio-v2.57.0": {
+    "tag": "studio-v2.57.0",
+    "source_commit": "official tag studio-v2.57.0",
+    "assets": [
+      {
+        "browser_download_url": "https://github.com/esengine/DeepSeek-Reasonix/releases/download/studio-v2.57.0/reasonix-linux-amd64.tar.gz",
+        "digest": "sha256:c227bbc08c65af27dbcc49aae84e115a912123a3e2b7902a6668acda75fb948f",
+        "name": "reasonix-linux-amd64.tar.gz",
+        "size": 40362566
+      }
+    ]
+  }
+}

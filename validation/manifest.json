@@ -1,0 +1,29 @@
+{
+  "state": "SEALED_FOR_ONE_RUN",
+  "validation_attempt": 1,
+  "max_validation_attempts": 2,
+  "base": "b859c515d813efcfc4755d3471dd9e7686c7706d",
+  "head": "25e2abffb237a36d307676713504fd8476ad0a0c",
+  "staged_candidate_tree": "5502cd68719d798df062d028fd43f8eb27166df5",
+  "image": "node@sha256:539d4d5b9c0df96bb9d1229264d358dc816e8592cb8867828a580b527e7ad0fa",
+  "ref": "refs/heads/validate-reasonix-1191-merge-20261106-a1",
+  "files": {
+    "sources.json": "c75101441235974fd769aae63db0403ebad34e2ebc366f4dde720450110bd18f",
+    "workflow.yml": "3926aa75f85ed56585ac96aac8f3632dec33fea3df9702a45402cf6dbe25b341",
+    "base.tar.gz": "ebdd7ff3d9c1be4a946ca523f7e7d349e8b131d4fef612dca6c79854fecd096d",
+    "VENDOR-LICENSE": "dc024237821ac82056c37f8d82e3be919bd51e39a4529ec12a8ab3e2a346dc4c",
+    "host.py": "99904010c3f02809a23508a77a1c26ddb751473c3cd873f202ec0fe33b64ed3c",
+    "native-assets.json": "f28be4904cb460f12eb3cc25aca7cc125e7e76cf2a01b14cbd57896023132f6d",
+    "native.py": "e9eae3f7382f9d914645e4dde34a85292de345bf1d6ba75dcfab40ecef244457",
+    "yaml.tar.gz": "174f4c3c6654b065b59548dd56ba91dc7b49f41f7ab95353881932d8e41383ca",
+    "source-modes.json": "04001ac47d1470e50d9a3cfc1b9d19dd5eabf2a196e01a460c024e998153b9a9",
+    "observe.py": "f6e4422927b8bbdfbd57a4f0d68b4085bdccd5531897fe7694387a6b4455217c",
+    "yaml-fingerprints.json": "f37193eb3f315d939401b9ba68b93f6b4d753fa2860fb90fcd3bf090a7363f0c",
+    "packet_check.py": "d0ea01115cca9b5a2d443988825fa0203ef4676a0205a8e0dec76a25fd9f84e2",
+    "candidate.tar.gz": "7e027b7eed5507c01f8743ee81c28aaffba707318baf035f35d48511e77d8588"
+  },
+  "source_trees": {
+    "base": "94d97cfd0c3731995a3b22ae96e2a88a004482a5",
+    "candidate": "5502cd68719d798df062d028fd43f8eb27166df5"
+  }
+}

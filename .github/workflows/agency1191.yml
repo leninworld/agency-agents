@@ -1,0 +1,42 @@
+name: Validate Reasonix integration after upstream merge
+on:
+  push:
+    branches: [validate-reasonix-1191-merge-20261106-a1]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Actual first creation-time anchor
+        id: anchor
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api repos/leninworld/agency-agents/actions/runs/$GITHUB_RUN_ID > "$RUNNER_TEMP/run.json"
+          python3 - <<'PY'
+          import json,os,datetime
+          from pathlib import Path
+          r=json.loads((Path(os.environ['RUNNER_TEMP'])/'run.json').read_text())
+          assert r['run_attempt']==1 and r['id']==int(os.environ['GITHUB_RUN_ID'])
+          assert r['event']=='push' and r['head_branch']=='validate-reasonix-1191-merge-20261106-a1'
+          origin=int(datetime.datetime.fromisoformat(r['created_at'].replace('Z','+00:00')).timestamp())
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write(f'origin={origin}\n')
+          PY
+      - name: Full affected offline Docker validation
+        env:
+          PACKET_ORIGIN: ${{ steps.anchor.outputs.origin }}
+        run: python3 validation/host.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: proof
+          path: ${{ runner.temp }}/agency1191/evidence/
+          if-no-files-found: error
+          retention-days: 7
