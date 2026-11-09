@@ -1,0 +1,41 @@
+{
+  "headers": {
+    "windsurf": "## Growth Hacker",
+    "aider": "## Growth Hacker"
+  },
+  "aggregate_tools": {
+    "aider": [
+      "CONVENTIONS.md",
+      "accum"
+    ],
+    "windsurf": [
+      ".windsurfrules",
+      "accum"
+    ],
+    "hermes": [
+      "agency-agents-router/data/agents.json",
+      "json"
+    ]
+  },
+  "json_form": "list",
+  "json_entry_keys": [
+    "slug",
+    "name",
+    "description",
+    "division",
+    "color",
+    "emoji",
+    "vibe",
+    "source_path",
+    "body"
+  ],
+  "target_name": "Growth Hacker",
+  "target_slug": "growth-hacker",
+  "source_sha256": {
+    "scripts/convert.sh": "c370a6e9bbea4fbc5b684a614ef9edf540010cf8c9be102a386678b8e8656a8f",
+    "scripts/test-convert-outputs.sh": "ff25444a37232062e01c85176a7244a352d86a18ff7114891d8ea4899429d9c6",
+    "scripts/build-hermes-plugin.py": "fe3d67b9b788bb6278af2811aada51a32689dab8908042f5e1696b50e8dd18ef",
+    "marketing/marketing-growth-hacker.md": "6938b4fccaf4447e8c4b8fd071ce383a484cd3fb72583d87ac9835fa9741a7c7"
+  },
+  "method": "Static AST/literal/header inspection only; no project execution"
+}

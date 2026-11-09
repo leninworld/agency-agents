@@ -1,0 +1,26 @@
+{
+  "state": "SEALED_FOR_ONE_RUN",
+  "validation_attempt": 1,
+  "max_validation_attempts": 2,
+  "base": "8ae6164602c95ca78828b148b9052460ee426885",
+  "source_trees": {
+    "base": "6981b3e465155eca062726c861acc97d8d6d8bee",
+    "candidate": "75c36b351477af5355de4974d2ee00fb474f762d"
+  },
+  "image": "node@sha256:539d4d5b9c0df96bb9d1229264d358dc816e8592cb8867828a580b527e7ad0fa",
+  "ref": "refs/heads/validate-growth-metrics-20261108-i1",
+  "files": {
+    "sources.json": "a5679e3c198c58d22df74dd6d700f6c654ee1674ec756ccc589c2746d85f275d",
+    "isolation.py": "6a45c4ca21bf76185cc538636781ab9037cca5240dea4cc4354a2101b9bcbb5d",
+    "workflow.yml": "1b73f6c5a17cba0e6dd28a02113d1047537709189e6b09e9f913deb29c5b8a9f",
+    "base.tar.gz": "aca648eef37fe15c27354c16c84002e1d4418fb8e7ccfdae3fca82ec2a6daf20",
+    "host.py": "70e3a3b2b76260d6056881d24176096afe1cbd950755c0cd3dbb38b9ee3c6314",
+    "yaml.tar.gz": "174f4c3c6654b065b59548dd56ba91dc7b49f41f7ab95353881932d8e41383ca",
+    "source-modes.json": "5af180023dd4fca3bd3990c53a82c0695a3a9a1254a136923b7dc22de5abc963",
+    "observe.py": "89510f79b6a5eb0de02b3bc7bfc03239fc1901f4bd1dad6fcdc7224ccdddd168",
+    "yaml-fingerprints.json": "f37193eb3f315d939401b9ba68b93f6b4d753fa2860fb90fcd3bf090a7363f0c",
+    "packet_check.py": "603125ec8cfd7a383440714014bd858c64fbe8d5333a4c407bcf89f6e5ae1fbc",
+    "candidate.tar.gz": "1d59d9817fa11e10fce46ecadd2c65f7a24050a425ee43f2a0c335ba23474ea2",
+    "format-proofs.json": "fb0d5f5d0f649b9a4c978242d2afb8eea4961d30952cd729000ab27f689d547f"
+  }
+}
