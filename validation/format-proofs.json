@@ -1,0 +1,54 @@
+{
+  "headers": {
+    "windsurf": [
+      "## Reality Checker",
+      "## Evidence Collector",
+      "## Senior Project Manager"
+    ],
+    "aider": [
+      "## Reality Checker",
+      "## Evidence Collector",
+      "## Senior Project Manager"
+    ]
+  },
+  "aggregate_tools": {
+    "aider": [
+      "CONVENTIONS.md",
+      "accum"
+    ],
+    "windsurf": [
+      ".windsurfrules",
+      "accum"
+    ],
+    "hermes": [
+      "agency-agents-router/data/agents.json",
+      "json"
+    ]
+  },
+  "json_form": "list",
+  "json_entry_keys": [
+    "slug",
+    "name",
+    "description",
+    "division",
+    "color",
+    "emoji",
+    "vibe",
+    "source_path",
+    "body"
+  ],
+  "targets": {
+    "reality-checker": "Reality Checker",
+    "evidence-collector": "Evidence Collector",
+    "senior-project-manager": "Senior Project Manager"
+  },
+  "source_sha256": {
+    "scripts/convert.sh": "c370a6e9bbea4fbc5b684a614ef9edf540010cf8c9be102a386678b8e8656a8f",
+    "scripts/test-convert-outputs.sh": "ff25444a37232062e01c85176a7244a352d86a18ff7114891d8ea4899429d9c6",
+    "scripts/build-hermes-plugin.py": "fe3d67b9b788bb6278af2811aada51a32689dab8908042f5e1696b50e8dd18ef",
+    "testing/testing-reality-checker.md": "6d32fcdb114233e13902ec6372d50293b120e85d490b5e81d372c29808f988a1",
+    "testing/testing-evidence-collector.md": "ff1868ae89f3be62f6f0da1fc8693582f18578c77751b8a65a53169ef15ececd",
+    "project-management/project-manager-senior.md": "70fb27cab174c97375293311211d5563c5ac257fba274450d1ca9c05b540ef2d"
+  },
+  "method": "Static AST/literal/header inspection only; no project execution"
+}

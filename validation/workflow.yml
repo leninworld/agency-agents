@@ -1,0 +1,42 @@
+name: Validate project capture evidence guidance
+on:
+  push:
+    branches: [validate-capture-evidence-1275-i1]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  proof:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Actual first creation-time anchor
+        id: anchor
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api repos/leninworld/agency-agents/actions/runs/$GITHUB_RUN_ID > "$RUNNER_TEMP/run.json"
+          python3 - <<'PY'
+          import json,os,datetime
+          from pathlib import Path
+          r=json.loads((Path(os.environ['RUNNER_TEMP'])/'run.json').read_text())
+          assert r['run_attempt']==1 and r['id']==int(os.environ['GITHUB_RUN_ID'])
+          assert r['event']=='push' and r['head_branch']=='validate-capture-evidence-1275-i1'
+          origin=int(datetime.datetime.fromisoformat(r['created_at'].replace('Z','+00:00')).timestamp())
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write(f'origin={origin}\n')
+          PY
+      - name: Full affected offline Docker validation
+        env:
+          PACKET_ORIGIN: ${{ steps.anchor.outputs.origin }}
+        run: python3 validation/host.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: proof
+          path: ${{ runner.temp }}/agency-capture-evidence-1275-i1/evidence/
+          if-no-files-found: error
+          retention-days: 7

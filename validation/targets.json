@@ -1,0 +1,14 @@
+{
+  "reality-checker": {
+    "name": "Reality Checker",
+    "path": "testing/testing-reality-checker.md"
+  },
+  "evidence-collector": {
+    "name": "Evidence Collector",
+    "path": "testing/testing-evidence-collector.md"
+  },
+  "senior-project-manager": {
+    "name": "Senior Project Manager",
+    "path": "project-management/project-manager-senior.md"
+  }
+}
